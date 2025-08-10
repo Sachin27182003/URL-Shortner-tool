@@ -1,8 +1,16 @@
 const express = require('express');
+import cors from 'cors';
 const { nanoid } = require('nanoid');
 const Url = require('../models/url');
 
+
 const router = express.Router();
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 router.post('/api/shorten', async (req, res) => {
     const { original_url } = req.body;
