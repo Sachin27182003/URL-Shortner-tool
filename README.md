@@ -64,8 +64,8 @@ MERN_URL_Shortener/
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
-    cd MERN_URL_Shortener
+    git clone https://github.com/Sachin27182003/URL-Shortner-tool.git
+    cd URL_Shortner-tool
     ```
 
 2.  **Backend Setup:**
@@ -79,7 +79,7 @@ MERN_URL_Shortener/
 
     ```
     MONGO_URI=<your_mongodb_connection_string>
-    BASE_URL=http://localhost:5000
+    BASE_URL = http://localhost:5000
     ```
 
     Start the backend server:
