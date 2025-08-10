@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+const baseUrl = import.meta.env.VITE_API_URL;
 
-const API_URL = 'http://localhost:5000/api';
+
+const API_URL = `${baseUrl}/api`;
 
 function UrlsTable() {
     const [urls, setUrls] = useState([]);
@@ -43,8 +45,8 @@ function UrlsTable() {
                                 </a>
                             </td>
                             <td className="py-3 px-6 text-left">
-                                <a href={`${'http://localhost:5000'}/${url.short_code}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                    {`${'http://localhost:5000'}/${url.short_code}`}
+                                <a href={`${baseUrl || 'https://url-shortner-tool.onrender.com'}/${url.short_code}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                    {`${baseUrl || 'https://url-shortner-tool.onrender.com'}/${url.short_code}`}
                                 </a>
                             </td>
                             <td className="py-3 px-6 text-center">{url.visit_count}</td>
