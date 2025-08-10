@@ -79,7 +79,7 @@ MERN_URL_Shortener/
 
     ```
     MONGO_URI=<your_mongodb_connection_string>
-    BASE_URL = http://localhost:5000
+    BASE_URL = <your_backend_url>
     ```
 
     Start the backend server:
@@ -99,6 +99,13 @@ MERN_URL_Shortener/
     npm install
     ```
 
+    Create a `.env` file in the `frontend` directory and add a variable:
+
+    ```
+
+    VITE_API_URL = <'your_backend_url'>
+    ```
+
     Start the frontend development server:
 
     ```bash
@@ -107,35 +114,48 @@ MERN_URL_Shortener/
 
     The frontend will be running on `http://localhost:5173`.
 
-### Accessing the Application
-
--   **Home Page:** `http://localhost:5173`
--   **Admin Page:** `http://localhost:5173/admin`
 
 ## Deployment
 
-### Backend (Render)
+This URL Shortener Tool project is fully deployed and accessible online, making it easy for anyone to shorten and share URLs without running the application locally.
 
-1.  Push your code to a GitHub repository.
-2.  Go to [Render](https://render.com/) and create a new "Web Service".
-3.  Connect your GitHub repository.
-4.  Configure the settings:
-    -   **Name:** Choose a name for your service.
-    -   **Root Directory:** `backend`
-    -   **Build Command:** `npm install`
-    -   **Start Command:** `npm start`
-5.  Add your environment variables (`MONGO_URI`, `BASE_URL` with your production frontend URL).
-6.  Deploy the service.
+-   **Frontend (Vercel) :** https://url-shortner-tool-kappa.vercel.app/
+The user-facing interface where you can enter a long URL, generate a shortened link, and manage your URLs.
 
-### Frontend (Vercel)
+-   **Backend End Point (Render) :** https://url-shortner-tool.onrender.com/
+The server-side application that handles URL shortening, redirection, and visit tracking.
 
-1.  Push your code to a GitHub repository.
-2.  Go to [Vercel](https://vercel.com/) and create a new project.
-3.  Connect your GitHub repository.
-4.  Configure the settings:
-    -   **Framework Preset:** Vite
-    -   **Root Directory:** `frontend`
-5.  Add your environment variables. Set `VITE_API_URL` to your deployed backend URL.
-6.  Deploy the project.
 
-# URL-Shortner-tool
+-   **Database :** MongoDB Atlas — Stores all original URLs, their shortened codes, and visit counts.
+
+## How It Works in Production
+- You visit the Frontend Live Demo and paste a long URL into the form.
+
+- The frontend sends a request to the Backend API.
+
+- The backend generates a short code, saves it in MongoDB Atlas, and returns the shortened link.
+
+- Clicking the shortened link redirects you to the original URL and increments the visit count.
+
+- The deployed version mirrors local development but is optimized for real-world usage, with cross-origin access enabled between the hosted frontend and backend.
+
+## 🌟 Thank You for Checking Out This Project
+Thank you for taking the time to explore the URL Shortener Tool! This project has been a great journey in applying my skills in full-stack web development, from designing the user interface to building the backend API and deploying a fully functional web application connected to a live database.
+
+I genuinely appreciate your interest in this project. Whether you are a recruiter, fellow developer, or curious visitor, your time here means a lot to me. I believe in building tools that are simple, efficient, and enjoyable to use, and I hope this application reflects that philosophy.
+
+If you have ideas for improvements, spot any issues, or simply want to collaborate, I’m always open to feedback and contributions. Let’s connect and make better tools together! 🚀
+
+
+<h4 align="center"><b>🌟 Shorten. Share. Smile! 😊 — Thank youu! 🌟</b></h4>
+
+
+ 
+
+#### 📬 Contact Me:
+
+- **Email:** sachinsachinkumar27082003@gmail.com
+
+- **LinkedIn:** https://linkedin.com/in/sachin-kumar-3440a1296
+
+- **Portfolio:** https://sachin27.vercel.app
